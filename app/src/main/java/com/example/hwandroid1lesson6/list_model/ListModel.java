@@ -9,17 +9,20 @@ import com.example.hwandroid1lesson6.R;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class ListModel implements Serializable {
-    public static ArrayList<ListModel> listModel = new ArrayList<>();
+import java.io.Serializable;
 
-    public String getList() {
-        return list;
+public class ListModel implements Serializable {
+    private  String title;
+
+    public ListModel(String title) {
+        this.title = title;
     }
 
-    private String list;
-    public static ArrayList<ListModel> getListModel(){
-        listModel.add(new ListModel());
-        return listModel;
+    public String getData() {
+        return title;
+    }
+
+    public void setData(String data) {
+        this.title = data;
     }
 }
-

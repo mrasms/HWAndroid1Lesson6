@@ -69,45 +69,7 @@ public class SecondFragment extends Fragment {
                     .replace(R.id.fragment_container, firstFragment).commit();
         }
     }
-
-
-    /*private void setupListener() {
-        binding.btnSendMessage.setOnClickListener(new View.OnClickListener() {
-            TextView textView = (TextView) binding.tvTimer;
-            CountDownTimer countDownTimer = new CountDownTimer(6000, 1000) {
-                public void onTick(long millisUntilFinished) {
-                    textView.setText(String.format(Locale.getDefault(), "%d ", millisUntilFinished / 1000L));
-                }
-
-                public void onFinish() {
-                    textView.setText("");
-                    String message = binding.etInputText.getText().toString().trim();
-                    Bundle bundle = new Bundle();
-                    bundle.putString("sendMessage", message);
-                    FirstFragment firstFragment = new FirstFragment();
-                    firstFragment.setArguments(bundle);
-                    getParentFragmentManager().beginTransaction().replace(R.id.fragment_container, firstFragment).commit();
-                }
-            };
-
-
-            @Override
-            public void onClick(View view) {
-                countDownTimer.start();
-            }
-        });
-    }*/
-
-   /* private void getData() {
-        if (getArguments() != null) {
-            listModel = (ListModel) getArguments().getSerializable("sendMessage");
-           // adapterData.addData(listModel);
-
-        }
-    }
-*/
-
-    @Override
+     @Override
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
